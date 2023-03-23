@@ -13,7 +13,7 @@
 
     <div class="header-container container">
         <div id="header-highscore">
-            <a href="" id="view-highscore"><p>View Highscores</p></a>
+            <a onclick="viewLeaderboard()" id="view-highscore"><p>View Highscores</p></a>
         </div>
         <div id="timer-text">
             <p>Time: <span id="countdown" style="color: red;">60</span>s</p>
@@ -26,28 +26,32 @@
     <div id="start-game" class="centered container">
         <h1>How well do you know JavaScript?</h1>
         <br>
-        <p>This quiz will ask you 4 questions about basic JavaScript concepts; try to answer before the time runs out!</p>
+        <p>This quiz will ask you 10 questions about basic JavaScript concepts; try to answer before the time runs out!</p>
         <button id="start-btn" class="button">Start Game</button>
 
     </div>
 
     <!-- Question 1 -->
 
-    <div id="question-one" class="container centered hidden">
+    <div id="question-one" class="container centered hidden question">
         <h1>Testing</h1>
         
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas amet debitis ipsa dolore ad nostrum a et culpa! Unde, recusandae.</p>
 
-        <button onclick="correct()" class="quiz-button">Quiz Question 1</button>
-        <button onclick="wrong()" class="quiz-button">Quiz Question 2</button>
-        <button class="quiz-button">Quiz Question 3</button>
-        <button class="quiz-button">Quiz Question 4</button>
+        <div id="button-container-one" class="container centered">
 
-        <hr>
-        <p id="correct" class="correct hidden">Correct!</p>
-        <p id="wrong" class="wrong hidden">Wrong!</p>
+            <button onclick="correct()" class="quiz-button">Quiz Question 1</button>
+            <button onclick="wrong()" class="quiz-button">Quiz Question 2</button>
+            <button onclick="wrong()" class="quiz-button">Quiz Question 3</button>
+            <button onclick="wrong()" class="quiz-button">Quiz Question 4</button>
 
-        <button id="next-button" class="button">Next Question</button>
+            <p id="correct" class="correct hidden">Correct! <span style="font-style: normal;">😊</span></p>
+            <p id="wrong" class="wrong hidden">Wrong! <span style="font-style: normal;">😢</span></p>
+            
+
+        </div>
+
+        <button onclick="nextQuestion()" class="button">Next Question</button>
     </div>
 
     <!-- Question 2 -->
@@ -61,10 +65,10 @@
         <button class="quiz-button">Quiz Question 4</button>
 
         <hr>
-        <p id="correct" class="">Correct!</p>
-        <p id="wrong">Wrong!</p>
+        <p id="correct" class="">Correct! 😊</p>
+        <p id="wrong">Wrong! 😢</p>
 
-        <button class="button">Next Question</button>
+        <button onclick="nextQuestion()" class="button">Next Question</button>
     </div>
 
     <!-- Question 3 -->
@@ -98,7 +102,7 @@
         <p id="correct" class="">Correct!</p>
         <p id="wrong">Wrong!</p>
 
-        <button class="button">Next Question</button>
+        <button class="button">View Score</button>
     </div>
 
     <!-- High Score Screen -->
@@ -113,23 +117,24 @@
         <div class="form">
             <label for="Submit your score"></label>
             <input type="text" placeholder="Enter your name" style="padding: 10px;">
-            <button class="button">Submit</button>
+            <button id="submit-score" class="button">Submit</button>
         </div>
         
         <button class="button" style="font-size: 1em;">Try again</button>
     </div>
     
     
-    <div id="leaderboard" class="centered container">
-        <ol class="score-list">
-            <li>Score 1</li>
-            <li>Score 2</li>
-            <li>Score 3</li>
-            <li>Score 4</li>
-            <li>Score 5</li>
-        </ol>
-    </div>
     
+</div>
+
+<div id="leaderboard" class="centered container hidden">
+    <ol class="score-list">
+        <li>Score 1</li>
+        <li>Score 2</li>
+        <li>Score 3</li>
+        <li>Score 4</li>
+        <li>Score 5</li>
+    </ol>
 </div>
 
 <script src="script.js"></script>    
