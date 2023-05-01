@@ -33,3 +33,7 @@ To use this application, simply open the index.html file in your web browser and
 
 ## Credits
 This application was created by Kyle Lucas.
+
+![Screenshot](screenshot.png)
+
+[Deployment](https://epipkl.github.io/DU_Challenge_4/)
