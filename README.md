@@ -36,4 +36,4 @@ This application was created by Kyle Lucas.
 
 ![Screenshot](screenshot.png)
 
-[Deployment](https://epipkl.github.io/DU_Challenge_4/)
+[Deployment](https://epipkl.github.io/DU4-JavaScript-Quiz/)
